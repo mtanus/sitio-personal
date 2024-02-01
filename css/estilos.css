@@ -166,6 +166,57 @@ h2 {
 }
 
 
+/* ----------PROYECTOS---------- */
+#proyectos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 32px;
+}
+
+.tarjeta-proyecto {
+    width: 70%;
+    max-width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+
+    padding: 8px 8px 32px;
+    border: 2px solid green;
+}
+
+.contenedor-img-proyecto {
+    display: flex;
+    position: relative;
+}
+
+.imagen-proyecto {
+    width: 100%;
+}
+
+.contenedor-img-proyecto i {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+}
+
+.tarjeta-proyecto i {
+    font-size: 1.5rem;
+}
+
+.habilidad-proyecto {
+    font-family: var(--fuente-titulos);
+    font-weight: bold;
+}
+
+.titulo-proyecto {
+    font-family: var(--fuente-titulos);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+
 /* ----------CLASES GENERALES---------- */
 .elemento-oculto {
     display: none;
