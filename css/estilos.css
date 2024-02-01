@@ -1,0 +1,123 @@
+/* ----------ESTILOS GENERALES---------- */
+* {
+    border: 1px solid red;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+    --fuente-titulos: 'Mohave', sans-serif;
+    --fuente-texto: 'Mulish', sans-serif;
+}
+
+html {
+    font-size: 16px;    
+    font-family: var(--fuente-texto);
+}
+
+/* ----------HEADER---------- */
+header {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 1.5rem;
+}
+
+#listado-menu {
+    display: flex; 
+    list-style-type: none;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 8px;
+
+    position: absolute;
+    top: 5vh; /* vinculado a la posicion centrada de los items del menu */
+    left: 0;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+
+    z-index: -1;
+}
+
+#iniciales {
+    font-family: var(--fuente-titulos);
+    font-weight: bold;
+    padding-left: 8px;
+}
+
+#contenedor-logo-menu {
+    padding-right: 8px;
+}
+
+
+/* ----------DESCRIPCIÓN BREVE---------- */
+#descripcion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 16px;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.5rem;
+    font-family: var(--fuente-titulos);
+
+    margin-top: 32px;
+}
+
+#foto-perfil {
+    width: 75vw;
+    min-width: 275px;
+    max-width: 425px;
+}
+
+#breve-descripcion {
+    text-align: center;
+    max-width: 310px;
+    line-height: 1.5;
+}
+
+.profesion {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+#listado-contacto {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 8px;
+    justify-content: space-evenly;
+    width: 50vw;
+    max-width: 280px;
+}
+
+#listado-contacto li {
+    display: block;
+    padding: 8px;
+}
+
+.logo-contacto i {
+    font-size: 2rem;
+    text-align: center;
+    /* margin: 8px; */
+}
+
+/* ----------CLASES GENERALES---------- */
+.elemento-oculto {
+    display: none;
+}
+
+.elemento-visible {
+    display: block;
+}
+
+.borde-punteado {
+    border: 2px dashed blue;
+}
+
