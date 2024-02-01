@@ -130,7 +130,41 @@ h2 {
     text-align: center;
     width: 70%;
     max-width: 325px;
+    line-height: 1.25;
+
 }
+
+
+/* ----------HABILIDADES---------- */
+#habilidades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 32px;
+}
+
+.tajeta-habilidad {
+    width: 70%;
+    max-width: 250px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+
+    padding: 8px 8px 32px;
+    border: 2px solid blue;
+}
+
+.tajeta-habilidad i,
+.titulo-habilidad {
+    font-size: 1.5rem;
+}
+
+.titulo-habilidad {
+    font-family: var(--fuente-titulos);
+    font-weight: bold;
+}
+
 
 /* ----------CLASES GENERALES---------- */
 .elemento-oculto {
