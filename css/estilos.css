@@ -108,6 +108,30 @@ h1 {
     /* margin: 8px; */
 }
 
+
+/* ----------PERFIL---------- */
+#perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 16px;
+}
+
+h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: var(--fuente-titulos);
+
+    margin-top: 32px;
+}
+
+.parrafo-perfil {
+    text-align: center;
+    width: 70%;
+    max-width: 325px;
+}
+
 /* ----------CLASES GENERALES---------- */
 .elemento-oculto {
     display: none;
