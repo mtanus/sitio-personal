@@ -108,6 +108,115 @@ h1 {
     /* margin: 8px; */
 }
 
+
+/* ----------PERFIL---------- */
+#perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 16px;
+}
+
+h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: var(--fuente-titulos);
+
+    margin-top: 32px;
+}
+
+.parrafo-perfil {
+    text-align: center;
+    width: 70%;
+    max-width: 325px;
+    line-height: 1.25;
+
+}
+
+
+/* ----------HABILIDADES---------- */
+#habilidades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 32px;
+}
+
+.tajeta-habilidad {
+    width: 70%;
+    max-width: 250px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+
+    padding: 8px 8px 32px;
+    border: 2px solid blue;
+}
+
+.tajeta-habilidad i,
+.titulo-habilidad {
+    font-size: 1.5rem;
+}
+
+.titulo-habilidad {
+    font-family: var(--fuente-titulos);
+    font-weight: bold;
+}
+
+
+/* ----------PROYECTOS---------- */
+#proyectos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 32px;
+}
+
+.tarjeta-proyecto {
+    width: 70%;
+    max-width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+
+    padding: 8px 8px 32px;
+    border: 2px solid green;
+}
+
+.contenedor-img-proyecto {
+    display: flex;
+    position: relative;
+}
+
+.imagen-proyecto {
+    width: 100%;
+}
+
+.contenedor-img-proyecto i {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+}
+
+.tarjeta-proyecto i {
+    font-size: 1.5rem;
+}
+
+.habilidad-proyecto {
+    font-family: var(--fuente-titulos);
+    font-weight: bold;
+}
+
+.titulo-proyecto {
+    font-family: var(--fuente-titulos);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+
 /* ----------CLASES GENERALES---------- */
 .elemento-oculto {
     display: none;
