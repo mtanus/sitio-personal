@@ -280,6 +280,27 @@ h2 {
     column-gap: 16px;
 }
 
+
+/* ----------FOOTER---------- */
+footer {
+    margin-top: 32px;
+    height: 10vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#listado-footer {
+    width: 100%;
+    max-width: 550px;
+    list-style-type: none;
+
+    display: flex;
+    justify-content: space-around;
+} 
+
+
 /* ----------CLASES GENERALES---------- */
 .elemento-oculto {
     display: none;
