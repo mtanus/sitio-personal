@@ -14,6 +14,13 @@ html {
     font-family: var(--fuente-texto);
 }
 
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 16px;
+}
+
 /* ----------HEADER---------- */
 header {
     width: 100%;
@@ -54,12 +61,12 @@ header {
 
 
 /* ----------DESCRIPCIÓN BREVE---------- */
-#descripcion {
+/* #descripcion {
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 16px;
-}
+} */
 
 h1 {
     text-align: center;
@@ -103,19 +110,19 @@ h1 {
 }
 
 .logo-contacto i {
-    font-size: 2rem;
+    font-size: 1.75rem;
     text-align: center;
     /* margin: 8px; */
 }
 
 
 /* ----------PERFIL---------- */
-#perfil {
+/* #perfil {
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 16px;
-}
+} */
 
 h2 {
     text-align: center;
@@ -130,16 +137,16 @@ h2 {
     text-align: center;
     width: 70%;
     max-width: 325px;
-    line-height: 1.25;
+    line-height: 1.5;
 
 }
 
 
 /* ----------HABILIDADES---------- */
 #habilidades {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; */
     row-gap: 32px;
 }
 
@@ -165,12 +172,16 @@ h2 {
     font-weight: bold;
 }
 
+.descipcion-habilidad {
+    line-height: 1.5;
+}
+
 
 /* ----------PROYECTOS---------- */
 #proyectos {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; */
     row-gap: 32px;
 }
 
@@ -214,6 +225,94 @@ h2 {
     font-family: var(--fuente-titulos);
     font-weight: bold;
     font-size: 1.5rem;
+}
+
+
+/* ----------CONTACTO---------- */
+.subtitulo-contacto {
+    font-family: var(--fuente-titulos);
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+#contenedor-form-contacto {
+    width: 90%;
+    max-width: 400px;
+}
+
+#formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+
+    /* width: 90%;
+    margin: 0px auto; */
+}
+
+#formulario-contacto label {
+    margin-top: 16px;
+    padding-left: 8px;
+}
+
+#formulario-contacto input,
+#btn-enviar-formulario {
+    height: 2rem;
+}
+
+.contenedor-btn-enviar {
+    position: relative;
+}
+
+#btn-enviar-formulario {
+    width: 100%;
+}
+
+.fi-rr-paper-plane {
+    position: absolute;
+    font-size: 1.25rem;
+    bottom: 0.10rem;
+    right: 15%;
+}
+
+#listado-redes-sociales {
+    list-style-type: none;
+    display: flex;
+    column-gap: 16px;
+}
+
+
+/* ----------FOOTER---------- */
+footer {
+    margin-top: 32px;
+    height: 10vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#listado-footer {
+    width: 100%;
+    max-width: 550px;
+    list-style-type: none;
+
+    display: flex;
+    justify-content: space-around;
+} 
+
+
+/* ----------OTROS---------- */
+.fi-rr-chevron-double-up {
+    font-size: 1.5rem;
+}
+
+#link-encabezado,
+.fi-rr-chevron-double-up {
+    font-size: 1.5rem;
+
+    position: sticky;
+    top: 90%;
+    left: 90%;
 }
 
 

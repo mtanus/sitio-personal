@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +22,7 @@
 <body>
 
     <!-- ----------HEADER---------- -->
-    <header>
+    <header id="encabezado" name="encabezado">
         <div id="iniciales">
             <p>MTM</p>
         </div>
@@ -82,6 +83,10 @@
         </p>
     </section>
 
+    <a id="link-encabezado" href="index.html#encabezado">
+        <i class="fi fi-rr-chevron-double-up"></i>    
+    </a>
+
 
     <!-- ----------HABILIDADES---------- -->
         <section id="habilidades">
@@ -93,7 +98,7 @@
                     Análisis de datos
                 </p>
                 <p class="descipcion-habilidad">
-                    Recolección, transformación y análisis de datos para su posterior visualización. Resumen de la información obtenida a partir de ellos.
+                    Extracción, transformación y carga de datos para su posterior análisis. Visualización de la información obtenida a partir de ellos.
                 </p>
             </div>
 
@@ -135,6 +140,53 @@
         </div>
     </section>
 
+
+    <!-- ----------CONTACTO---------- -->
+    <section id="contacto">
+        <h2 class="titulo-seccion">Contacto</h2>
+        <p class="subtitulo-contacto">Envíame un mensaje</p>
+
+        <div id="contenedor-form-contacto">
+            <form action="#" id="formulario-contacto">
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="campo-nombre">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="campo-email">
+                <label for="mj-email">Mensaje</label>
+                <textarea name="mj-email" id="" cols="30" rows="10"></textarea>
+                <div class="contenedor-btn-enviar">
+                    <button type="submit" id="btn-enviar-formulario">Enviar mensaje</button>
+                    <i class="fi fi-rr-paper-plane"></i>
+                </div>
+            </form>    
+        </div>
+
+        <p class="subtitulo-contacto">Contactame por redes sociales</p>
+        <ul id="listado-redes-sociales">
+            <li class="logo-red-social borde-punteado">
+                <img src="./img/logos_redes/whatsapp.png" alt="Logo para contacto por Whatsapp">
+            </li>
+            <li class="logo-red-social borde-punteado">
+                <img src="./img/logos_redes/linkedin.png" alt="Logo para contacto por LinkedIn">
+            </li>
+            <li class="logo-red-social borde-punteado">
+                <img src="./img/logos_redes/github.png" alt="Logo para contacto por Github">
+            </li>
+        </ul>
+
+    </section>
+
+
+    <!-- ----------FOOTER---------- -->
+    <footer id="pie">
+        <ul id="listado-footer">
+            <li class="item-footer">Inicio</li>
+            <li class="item-footer">Perfil</li>
+            <li class="item-footer">Proyectos</li>
+            <li class="item-footer">Contacto</li>
+        </ul>    
+    </footer>
+        
 
     <!-- Incluyo mi script de JavaScript -->
     <script src="./js/principal.js"></script>
