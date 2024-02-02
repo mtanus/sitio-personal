@@ -301,6 +301,21 @@ footer {
 } 
 
 
+/* ----------OTROS---------- */
+.fi-rr-chevron-double-up {
+    font-size: 1.5rem;
+}
+
+#link-encabezado,
+.fi-rr-chevron-double-up {
+    font-size: 1.5rem;
+
+    position: sticky;
+    top: 90%;
+    left: 90%;
+}
+
+
 /* ----------CLASES GENERALES---------- */
 .elemento-oculto {
     display: none;
