@@ -28,7 +28,6 @@
         </div>
         <div id="contenedor-listado-menu" class="elemento-oculto">
             <ul id="listado-menu" class="menu-vertical">
-                <!-- NO ANDA EL ENLACE AL ENCABEZADO -->
                 <li class="item-menu"><a href="./index.html#descripcion">Inicio</a></li>
                 <li class="item-menu"><a href="./index.html#perfil">Perfil</a></li>
                 <li class="item-menu"><a href="./index.html#proyectos">Proyectos</a></li>
@@ -45,22 +44,27 @@
     <!-- ----------DESCRIPCIÓN BREVE---------- -->
     <section id="descripcion">
         <h1 id="nombre">Mauricio Tanus Mafud</h1>
-        <img src="./img/foto_perfil.jpg" alt="Foto de perfil" id="foto-perfil">
+        <div id="marco-foto">
+            <img src="./img/foto_perfil.jpg" alt="Foto de perfil" id="foto-perfil">
+        </div>
         <p id="breve-descripcion"><span class="profesion">Bioingeniero</span> con experiencia en análisis de datos y desarrollo web</p>
         <ul id="listado-contacto">
-            <li class="logo-contacto borde-punteado">
+            <li class="logo-contacto">
                 <i class="fi fi-rr-envelope"></i>
             </li>
-            <li class="logo-contacto borde-punteado">
+            <li class="logo-contacto">
                 <i class="fi fi-rr-phone-flip"></i>
             </li>
-            <li class="logo-contacto borde-punteado">
+            <li class="logo-contacto">
                 <i class="fi fi-rr-marker"></i>
             </li>
-            <li class="logo-contacto borde-punteado">
+            <!-- <li class="logo-contacto borde-punteado">
                 <i class="fi fi-rr-file-user"></i>
-            </li>
+            </li> -->
         </ul>
+        <div id="contenedor-link-cv">
+            <a href="" id="link-cv">Descargar CV <i class="fi fi-rr-file-user"></i></a>
+        </div>
     </section>
 
 
@@ -90,30 +94,30 @@
 
 
     <!-- ----------HABILIDADES---------- -->
-        <section id="habilidades">
-            <h2 class="titulo-seccion">Habilidades</h2>
+    <section id="habilidades">
+        <h2 class="titulo-seccion">Habilidades</h2>
 
-            <div class="tajeta-habilidad">
-                <i class="fi fi-rr-chart-simple"></i>
-                <p class="titulo-habilidad">
-                    Análisis de datos
-                </p>
-                <p class="descipcion-habilidad">
-                    Extracción, transformación y carga de datos para su posterior análisis. Visualización de la información obtenida a partir de ellos.
-                </p>
-            </div>
+        <div class="tajeta-habilidad">
+            <i class="fi fi-rr-chart-simple"></i>
+            <p class="titulo-habilidad">
+                Análisis de datos
+            </p>
+            <p class="descipcion-habilidad">
+                Extracción, transformación y carga de datos para su posterior análisis. Visualización de la información obtenida a partir de ellos.
+            </p>
+        </div>
 
-            <div class="tajeta-habilidad">
-                <i class="fi fi-rr-square-terminal"></i>
-                <p class="titulo-habilidad">
-                    Desarrollo web
-                </p>
-                <p class="descipcion-habilidad">
-                    Diseño web responsivo, conservando la identidad de cada marca o empresa y agregando interactividad para los usuarios.
-                </p>
-            </div>
+        <div class="tajeta-habilidad">
+            <i class="fi fi-rr-square-terminal"></i>
+            <p class="titulo-habilidad">
+                Desarrollo web
+            </p>
+            <p class="descipcion-habilidad">
+                Diseño web responsivo, conservando la identidad de cada marca o empresa y agregando interactividad para los usuarios.
+            </p>
+        </div>
 
-        </section>
+    </section>
 
     
     <!-- ----------PROYECTOS---------- -->

@@ -104,8 +104,13 @@ header {
 
 #listado-menu a {
     color: white;
-    text-decoration: none;
 }
+
+/* #listado-menu a::after {
+    content: '';
+    border-bottom: 5px dashed white;
+    display: block;
+} */
 
 .item-menu:hover {
     border-bottom: 3px solid var(--color-2rio);
@@ -115,12 +120,9 @@ header {
 }
 
 /* ----------DESCRIPCIÓN BREVE---------- */
-/* #descripcion {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 16px;
-} */
+#descripcion {
+    min-height: 85vh;
+}
 
 h1 {
     text-align: center;
@@ -129,24 +131,42 @@ h1 {
     font-family: var(--fuente-titulos);
 
     /* margin-top: 32px; */
-    padding-top: var(--alto-header);
+    padding: var(--alto-header) 4px 0px;
+    color: var(--color-1rio);
+
+    animation: aparecer-por-izq 1s ease-in 0s 1 ;
 }
 
 #foto-perfil {
+    width: 100%;
+
+    position: relative;
+    top: -6px;
+    left: -8px;   
+}
+
+#marco-foto {
     width: 75vw;
     min-width: 250px;
     max-width: 300px;
+    border: 5px solid var(--color-1rio);
+    animation: aparecer-por-der 1s ease-in 0s 1 ;
 }
 
 #breve-descripcion {
     text-align: center;
     max-width: 310px;
     line-height: 1.5;
+    padding: 0px 4px;
+
+    animation: aparecer-por-izq 1s ease-in 0s 1 ;
 }
 
 .profesion {
     font-weight: bold;
     font-size: 1.5rem;
+
+    background: linear-gradient(to right, var(--color-1rio-claro), white);
 }
 
 #listado-contacto {
@@ -157,19 +177,51 @@ h1 {
     justify-content: space-evenly;
     width: 50vw;
     max-width: 280px;
+
+    animation: aparecer-por-izq 1s ease-in 0s 1 ;
+
 }
 
-#listado-contacto li {
+.logo-contacto {
     display: block;
-    padding: 8px;
+    padding: 4px;
+
+    background-color: var(--color-1rio-oscuro);
+    color: var(--color-2rio);
+}
+
+.logo-contacto:hover {
+    color: white;
+    transform: scale(1.1);
+    transition: 0.15s;
 }
 
 .logo-contacto i {
     font-size: 1.75rem;
     text-align: center;
-    /* margin: 8px; */
+    padding: 4px;
 }
 
+#contenedor-link-cv {
+    width: 180px;
+    font-size: 1.25rem;
+    text-align: center;
+    font-style: var(--fuente-titulos);
+    padding: 8px;
+    background-color: var(--color-3rio);
+
+    animation: aparecer-por-der 1s ease-in 0s 1 ;
+}
+
+#contenedor-link-cv a,
+#contenedor-link-cv i {
+    color: var(--color-3rio-claro);
+}
+
+#contenedor-link-cv:hover {
+    transform: scale(1.1);
+    transition: 0.15s;
+}
 
 /* ----------PERFIL---------- */
 /* #perfil {
@@ -382,6 +434,44 @@ footer {
 }
 
 .borde-punteado {
-    border: 2px dashed blue;
+    border: 2px dashed white;
 }
 
+a {
+    text-decoration: none;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(30deg); }
+    50% { transform: rotate(120deg); }
+    100% { transform: rotate(360deg); }
+
+        /* animation-name: spin;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both; */
+    /* animation: spin 3s linear 3s infinite alternate both; */
+
+}
+
+@keyframes aparecer-por-izq {
+    0% {transform: translate(-10vw) scale(0.1);}
+    10% {transform: translate(-10vw) scale(1);}
+    25% {transform: translate(-5vw);}
+    50% {transform: translate(-2.5vw);}
+    100% {transform: translate(0vw);}
+    
+}
+
+@keyframes aparecer-por-der {
+    0% {transform: translate(10vw) scale(0.1);}
+    10% {transform: translate(10vw) scale(1);}
+    25% {transform: translate(5vw);}
+    50% {transform: translate(2.5vw);}
+    100% {transform: translate(0vw);}
+    
+}
