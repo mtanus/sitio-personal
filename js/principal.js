@@ -24,3 +24,20 @@ menuCerrar.addEventListener('click', () => {
     menuCerrar.classList.remove('elemento-visible');
     menuCerrar.classList.add('elemento-oculto');
 })
+
+let arregloItemsMenu = document.querySelectorAll('.item-menu');
+for (let i = 0; i < arregloItemsMenu.length; i++) {
+    arregloItemsMenu[i].addEventListener('click', () => {
+        console.log("Estoy apretando un item del menu");
+
+        contenedorListadoMenu.classList.remove('elemento-visible');
+        contenedorListadoMenu.classList.add('elemento-oculto');
+    
+        menuHamburguesa.classList.remove('elemento-oculto');
+        menuHamburguesa.classList.add('elemento-visible');
+    
+        menuCerrar.classList.remove('elemento-visible');
+        menuCerrar.classList.add('elemento-oculto');
+        
+        });
+}

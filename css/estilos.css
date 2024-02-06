@@ -7,6 +7,21 @@
 
     --fuente-titulos: 'Mohave', sans-serif;
     --fuente-texto: 'Mulish', sans-serif;
+
+    --color-1rio: #3F3075;
+    --color-1rio-claro: #877CB0;
+    --color-1rio-oscuro: #12073B;
+
+    --color-2rio: #AAA939;
+    --color-2rio-claro: #FFFEAA;
+    --color-2rio-oscuro: #555400;
+
+    --color-3rio: #AA8339;
+    --color-3rio-claro: #FFE2AA;
+    --color-3rio-oscuro: #553800;
+
+    --alto-header: 10vh;
+
 }
 
 html {
@@ -24,12 +39,47 @@ section {
 /* ----------HEADER---------- */
 header {
     width: 100%;
-    height: 10vh;
+    /* height: 10vh; */
+    height: var(--alto-header);
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     font-size: 1.5rem;
+
+    position: sticky;
+    top: 0;
+
+    border-bottom: 2px solid var(--color-1rio-oscuro);
+    background-color: white;
+
+    z-index: 1;
+}
+
+#iniciales {
+    font-family: var(--fuente-titulos);
+    font-weight: bold;
+    margin-left: 8px;
+    background-color: var(--color-1rio-oscuro);
+    color: white;
+    border-radius: 50%;
+    /* height: calc(var(--alto-header) * 0.70);
+    width: calc(var(--alto-header) * 0.70); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#iniciales p {
+    padding: calc(var(--alto-header) * 0.1);
+    
+}
+
+#contenedor-logo-menu {
+    background-color: var(--color-1rio-oscuro);
+    color: white;
+    padding: calc(var(--alto-header) * 0.1);
+    margin-right: 8px;
+
 }
 
 #listado-menu {
@@ -37,36 +87,42 @@ header {
     list-style-type: none;
     flex-direction: column;
     align-items: center;
-    row-gap: 8px;
+    row-gap: 24px;
 
-    position: absolute;
-    top: 5vh; /* vinculado a la posicion centrada de los items del menu */
+    position: fixed;
+    top: var(--alto-header); /* vinculado a la posicion centrada de los items del menu */
     left: 0;
     width: 100%;
-    margin: 0px;
-    padding: 0px;
+    padding: 16px 0px;
 
-    z-index: -1;
+    background-color: var(--color-1rio-oscuro);
+    opacity: 0.85;
+    /* z-index: -1; */
+
+    transition: top 5s;
 }
 
-#iniciales {
-    font-family: var(--fuente-titulos);
-    font-weight: bold;
-    padding-left: 8px;
+#listado-menu a {
+    color: white;
 }
 
-#contenedor-logo-menu {
-    padding-right: 8px;
-}
+/* #listado-menu a::after {
+    content: '';
+    border-bottom: 5px dashed white;
+    display: block;
+} */
 
+.item-menu:hover {
+    border-bottom: 3px solid var(--color-2rio);
+    border-radius: 4px;
+    transform: scale(1.05);
+    transition: 0.1s;
+}
 
 /* ----------DESCRIPCIÓN BREVE---------- */
-/* #descripcion {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 16px;
-} */
+#descripcion {
+    min-height: 85vh;
+}
 
 h1 {
     text-align: center;
@@ -74,24 +130,43 @@ h1 {
     font-size: 2.5rem;
     font-family: var(--fuente-titulos);
 
-    margin-top: 32px;
+    /* margin-top: 32px; */
+    padding: var(--alto-header) 4px 0px;
+    color: var(--color-1rio);
+
+    animation: aparecer-por-izq 1s ease-in 0s 1 ;
 }
 
 #foto-perfil {
+    width: 100%;
+
+    position: relative;
+    top: -6px;
+    left: -8px;   
+}
+
+#marco-foto {
     width: 75vw;
-    min-width: 275px;
-    max-width: 425px;
+    min-width: 250px;
+    max-width: 300px;
+    border: 5px solid var(--color-1rio);
+    animation: aparecer-por-der 1s ease-in 0s 1 ;
 }
 
 #breve-descripcion {
     text-align: center;
     max-width: 310px;
     line-height: 1.5;
+    padding: 0px 4px;
+
+    animation: aparecer-por-izq 1s ease-in 0s 1 ;
 }
 
 .profesion {
     font-weight: bold;
     font-size: 1.5rem;
+
+    background: linear-gradient(to right, var(--color-1rio-claro), white);
 }
 
 #listado-contacto {
@@ -102,19 +177,51 @@ h1 {
     justify-content: space-evenly;
     width: 50vw;
     max-width: 280px;
+
+    animation: aparecer-por-izq 1s ease-in 0s 1 ;
+
 }
 
-#listado-contacto li {
+.logo-contacto {
     display: block;
-    padding: 8px;
+    padding: 4px;
+
+    background-color: var(--color-1rio-oscuro);
+    color: var(--color-2rio);
+}
+
+.logo-contacto:hover {
+    color: white;
+    transform: scale(1.1);
+    transition: 0.15s;
 }
 
 .logo-contacto i {
     font-size: 1.75rem;
     text-align: center;
-    /* margin: 8px; */
+    padding: 4px;
 }
 
+#contenedor-link-cv {
+    width: 180px;
+    font-size: 1.25rem;
+    text-align: center;
+    font-style: var(--fuente-titulos);
+    padding: 8px;
+    background-color: var(--color-3rio);
+
+    animation: aparecer-por-der 1s ease-in 0s 1 ;
+}
+
+#contenedor-link-cv a,
+#contenedor-link-cv i {
+    color: var(--color-3rio-claro);
+}
+
+#contenedor-link-cv:hover {
+    transform: scale(1.1);
+    transition: 0.15s;
+}
 
 /* ----------PERFIL---------- */
 /* #perfil {
@@ -130,7 +237,8 @@ h2 {
     font-size: 2rem;
     font-family: var(--fuente-titulos);
 
-    margin-top: 32px;
+    /* margin-top: 32px; */
+    padding-top: var(--alto-header);
 }
 
 .parrafo-perfil {
@@ -326,6 +434,44 @@ footer {
 }
 
 .borde-punteado {
-    border: 2px dashed blue;
+    border: 2px dashed white;
 }
 
+a {
+    text-decoration: none;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(30deg); }
+    50% { transform: rotate(120deg); }
+    100% { transform: rotate(360deg); }
+
+        /* animation-name: spin;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both; */
+    /* animation: spin 3s linear 3s infinite alternate both; */
+
+}
+
+@keyframes aparecer-por-izq {
+    0% {transform: translate(-10vw) scale(0.1);}
+    10% {transform: translate(-10vw) scale(1);}
+    25% {transform: translate(-5vw);}
+    50% {transform: translate(-2.5vw);}
+    100% {transform: translate(0vw);}
+    
+}
+
+@keyframes aparecer-por-der {
+    0% {transform: translate(10vw) scale(0.1);}
+    10% {transform: translate(10vw) scale(1);}
+    25% {transform: translate(5vw);}
+    50% {transform: translate(2.5vw);}
+    100% {transform: translate(0vw);}
+    
+}
