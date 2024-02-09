@@ -211,6 +211,7 @@ h1 {
     background-color: var(--color-3rio);
 
     animation: aparecer-por-der 1s ease-in 0s 1 ;
+    margin-bottom: 5vh;
 }
 
 #contenedor-link-cv a,
@@ -224,12 +225,13 @@ h1 {
 }
 
 /* ----------PERFIL---------- */
-/* #perfil {
-    display: flex;
+#perfil {
+    /* display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 16px;
-} */
+    row-gap: 16px; */
+    background-color: var(--color-2rio);
+}
 
 h2 {
     text-align: center;
@@ -239,14 +241,30 @@ h2 {
 
     /* margin-top: 32px; */
     padding-top: var(--alto-header);
+    color: var(--color-1rio);
 }
 
 .parrafo-perfil {
     text-align: center;
     width: 70%;
     max-width: 325px;
+    min-width: 175px;
     line-height: 1.5;
 
+    border: 2px solid var(--color-2rio-oscuro);
+    border-radius: 8px;
+    padding: 4px;
+    background-color: white;
+}
+
+.parrafo-perfil:last-of-type {
+    margin-bottom: 5vh;
+}
+
+.parrafo-perfil:hover {
+    /* border: 4px solid var(--color-2rio-oscuro); */
+    border-color: var(--color-2rio-claro);
+    background-color: var(--color-2rio-claro);
 }
 
 
@@ -421,6 +439,8 @@ footer {
     position: sticky;
     top: 90%;
     left: 90%;
+
+    height: 5vh;
 }
 
 
