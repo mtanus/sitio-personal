@@ -97,24 +97,30 @@
     <section id="habilidades">
         <h2 class="titulo-seccion">Habilidades</h2>
 
-        <div class="tajeta-habilidad">
-            <i class="fi fi-rr-chart-simple"></i>
-            <p class="titulo-habilidad">
-                Análisis de datos
-            </p>
-            <p class="descipcion-habilidad">
-                Extracción, transformación y carga de datos para su posterior análisis. Visualización de la información obtenida a partir de ellos.
-            </p>
+        <div class="contenedor-tarjeta-habilidad">
+            <div class="marco-tarjeta-habilidad"></div>
+            <div class="tarjeta-habilidad">
+                <i class="fi fi-rr-chart-simple"></i>
+                <p class="titulo-habilidad">
+                    Análisis de datos
+                </p>
+                <p class="descipcion-habilidad">
+                    Extracción, transformación y carga de datos para su posterior análisis. Visualización de la información obtenida a partir de ellos.
+                </p>
+            </div>    
         </div>
 
-        <div class="tajeta-habilidad">
-            <i class="fi fi-rr-square-terminal"></i>
-            <p class="titulo-habilidad">
-                Desarrollo web
-            </p>
-            <p class="descipcion-habilidad">
-                Diseño web responsivo, conservando la identidad de cada marca o empresa y agregando interactividad para los usuarios.
-            </p>
+        <div class="contenedor-tarjeta-habilidad">
+            <div class="marco-tarjeta-habilidad"></div>
+            <div class="tarjeta-habilidad">
+                <i class="fi fi-rr-square-terminal"></i>
+                <p class="titulo-habilidad">
+                    Desarrollo web
+                </p>
+                <p class="descipcion-habilidad">
+                    Diseño web responsivo, conservando la identidad de cada marca o empresa y agregando interactividad para los usuarios.
+                </p>
+            </div>    
         </div>
 
     </section>
@@ -124,25 +130,53 @@
     <section id="proyectos">
         <h2 class="titulo-seccion">Proyectos</h2>
 
-        <div class="tarjeta-proyecto">
+        <article class="tarjeta-proyecto">
             <div class="contenedor-img-proyecto">
                 <img src="./img/dashboard_looker_2.png" alt="Dashboard de información sobre Internet y redes móviles" class="imagen-proyecto">
-                <i class="fi fi-rr-angle-double-small-right"></i>
+                <a href="https://lookerstudio.google.com/reporting/b75a036a-5dff-46e5-80ee-926e7da62f17" target="_blank">
+                    <i class="fi fi-rr-angle-double-small-right"></i>    
+                </a>
             </div>
             <p class="habilidad-proyecto">Análisis de datos</p>
             <p class="titulo-proyecto">Análisis histórico de redes móviles e Internet</p>
-            <p class="descripcion-proyecto">Dashboard interactivo con Looker Studio, para visualizar resultados del análisis de diversas fuentes de datos históricas de redes móviles e Internet.</p>
-        </div>
+            <details class="descripcion-proyecto">
+                <summary>Dashboard interactivo con Looker Studio, para visualizar resultados del análisis de diversas fuentes de datos históricas de redes móviles e Internet.</summary>
+                <p>Como trabajo final de mi formación en <strong>Big Data</strong> realicé un análisis de diversas fuentes de datos históricas de redes móviles e Internet. El proceso requirió las siguientes etapas:</p>
+                <ul>
+                    <li><strong>Recolección de datos</strong> de diversas fuentes</li>
+                    <li><strong>Transformación y limpieza de datos</strong> utilizando Google Sheets</li>
+                    <li><strong>Generación de un dashboard interactivo</strong> para visualizar resultados con <strong>Looker Studio</strong></li>
+                </ul>
+                <a href="https://lookerstudio.google.com/reporting/b75a036a-5dff-46e5-80ee-926e7da62f17" target="_blank">
+                    <i class="fi fi-rr-angle-double-small-right"></i>    
+                </a>
+            </details>
+        </article>
 
-        <div class="tarjeta-proyecto">
+        <article class="tarjeta-proyecto">
             <div class="contenedor-img-proyecto">
                 <img src="./img/home_ferreteria_web_1.png" alt="Home del sitio web de una ferretería" class="imagen-proyecto">
-                <i class="fi fi-rr-angle-double-small-right"></i>
+                <a href="https://ferreteria-el-cosito.netlify.app/" target="_blank">
+                    <i class="fi fi-rr-angle-double-small-right"></i>
+                </a>                
             </div>
             <p class="habilidad-proyecto">Desarrollo web</p>
             <p class="titulo-proyecto">Diseño Front End Página Web</p>
-            <p class="descripcion-proyecto">Diseño y desarrollo de una página web para una ferretería con venta al público general. Cuenta con un inicio atractivo, galería de imágenes, formulario de suscripción y de contacto y ubicación de sucursales.</p>
-        </div>
+            <details class="descripcion-proyecto">
+                <summary>Diseño y desarrollo de una página web para una ferretería con venta al público general. Cuenta con un inicio atractivo, galería de imágenes, formulario de suscripción y de contacto y ubicación de sucursales.</summary>
+                <p>Diseño y desarrollo de una página web para una ferretería con venta al público general, utilizando <strong>HTML, CSS y JavaScript.</strong> Su <strong>diseño responsivo</strong> permite adaptarse a diferentes tamaño de pantalla. Cuenta con</p>
+                <ul>
+                    <li>página de inicio atractiva</li>
+                    <li>galería de imágenes</li>
+                    <li>formulario de suscripción y de contacto</li>
+                    <li>ubicación de sucursales</li>
+                    <li>carrito de compras</li>
+                </ul>
+                <a href="https://ferreteria-el-cosito.netlify.app/" target="_blank">
+                    <i class="fi fi-rr-angle-double-small-right"></i>
+                </a>                
+            </details>
+        </article>
     </section>
 
 
