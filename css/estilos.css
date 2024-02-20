@@ -367,7 +367,8 @@ h2 {
 
 .tarjeta-proyecto:hover .habilidad-proyecto,
 .tarjeta-proyecto:hover .descripcion-proyecto {
-    color: grey;
+    /* color: grey; */
+    color: var(--color-1rio);
     transition: color .25s;
 }
 
@@ -389,7 +390,7 @@ h2 {
     width: 100%;
 }
 
-.contenedor-img-proyecto i {
+.contenedor-img-proyecto a {
     position: absolute;
     bottom: 8px;
     right: 8px;
@@ -402,7 +403,8 @@ h2 {
 }
 
 .tarjeta-proyecto i:hover {
-    transform: scale(1.2);
+    background-color:  var(--color-1rio-claro);
+    border: 2px solid var(--color-1rio-claro);
 }
 
 .habilidad-proyecto {
@@ -430,6 +432,29 @@ h2 {
 .descripcion-proyecto {
     color: white;
 }
+
+.descripcion-proyecto summary {
+    margin-bottom: 8px;
+}
+
+.descripcion-proyecto p {
+    margin: 0px 8px 4px;
+}
+
+.descripcion-proyecto li {
+    margin: 4px 32px;
+}
+
+.descripcion-proyecto a {
+    position: relative;
+    left: 80%;
+}
+
+.descripcion-proyecto i:hover {
+    background-color:  var(--color-1rio-claro);
+    border: 2px solid var(--color-1rio-claro);
+}
+
 
 /* ----------CONTACTO---------- */
 .subtitulo-contacto {
