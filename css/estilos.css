@@ -342,6 +342,7 @@ h2 {
     flex-direction: column;
     align-items: center; */
     row-gap: 32px;
+    background-color: var(--color-3rio);
 }
 
 .tarjeta-proyecto {
@@ -354,6 +355,29 @@ h2 {
 
     padding: 8px 8px 32px;
     border: 2px solid green;
+
+    transition: all .25s;
+    /* background-color: var(--color-3rio-claro); */
+}
+
+.tarjeta-proyecto:hover {
+    background-color: var(--color-3rio-claro);
+    transition: background-color .25s;
+}
+
+.tarjeta-proyecto:hover .habilidad-proyecto,
+.tarjeta-proyecto:hover .descripcion-proyecto {
+    color: grey;
+    transition: color .25s;
+}
+
+.tarjeta-proyecto:hover .habilidad-proyecto::before {
+    border-bottom: 2px solid grey;
+    transition: all .25s;
+}
+
+.tarjeta-proyecto:last-of-type {
+    margin-bottom: 5vh;
 }
 
 .contenedor-img-proyecto {
@@ -373,11 +397,28 @@ h2 {
 
 .tarjeta-proyecto i {
     font-size: 1.5rem;
+    background-color: var(--color-1rio-oscuro);
+    color: white;
+}
+
+.tarjeta-proyecto i:hover {
+    transform: scale(1.2);
 }
 
 .habilidad-proyecto {
     font-family: var(--fuente-titulos);
     font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.habilidad-proyecto::before {
+    content: '';
+    display: block;
+    width: 16px;
+    margin-right: 4px;
+    border-bottom: 2px solid white;
 }
 
 .titulo-proyecto {
@@ -386,6 +427,9 @@ h2 {
     font-size: 1.5rem;
 }
 
+.descripcion-proyecto {
+    color: white;
+}
 
 /* ----------CONTACTO---------- */
 .subtitulo-contacto {
@@ -461,10 +505,6 @@ footer {
 
 
 /* ----------OTROS---------- */
-.fi-rr-chevron-double-up {
-    font-size: 1.5rem;
-}
-
 #link-encabezado,
 .fi-rr-chevron-double-up {
     font-size: 1.5rem;
@@ -477,6 +517,7 @@ footer {
 }
 
 .fi-rr-chevron-double-up {
+    font-size: 1.5rem;
     font-family: var(--fuente-titulos);
     font-weight: bold;
     margin-right: 8px;
