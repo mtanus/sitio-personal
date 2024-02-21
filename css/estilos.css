@@ -470,6 +470,8 @@ h2 {
     font-family: var(--fuente-titulos);
     font-weight: bold;
     font-size: 1.25rem;
+    text-align: center;
+    padding: 0px 4px;
 }
 
 #contenedor-form-contacto {
@@ -486,14 +488,53 @@ h2 {
     margin: 0px auto; */
 }
 
+.contenedor-campo {
+    position: relative;
+}
+
 #formulario-contacto label {
-    margin-top: 16px;
-    padding-left: 8px;
+    /* margin-top: 16px; */
+    padding: 0px 8px;
+    position: absolute;
+    left: 8px;
+    top: 0px;
+    background-color: var(--color-1rio-oscuro);
+    opacity: 0;
+    transition: all 0.25s;
+}
+
+#formulario-contacto input,
+#formulario-contacto textarea {
+    background-color: var(--color-1rio-oscuro);
+    border: 1px solid white;
+    outline: none;
+    color: white;
+    padding: 8px;
+    margin: 16px 0px;
+    width: 100%;
+    position: relative;
+}
+
+#formulario-contacto input:focus,
+#formulario-contacto textarea:focus {
+    border: 3px solid white;
+}
+
+#formulario-contacto input:focus::placeholder,
+#formulario-contacto textarea:focus::placeholder {
+    opacity: 0;
+}
+
+#formulario-contacto input:focus + label,
+#formulario-contacto textarea:focus + label,
+#formulario-contacto input:not(:focus):not(:placeholder-shown) + label,
+#formulario-contacto textarea:not(:focus):not(:placeholder-shown) + label {
+    opacity: 1;
 }
 
 #formulario-contacto input,
 #btn-enviar-formulario {
-    height: 2rem;
+    height: 3rem;
 }
 
 .contenedor-btn-enviar {
@@ -503,26 +544,33 @@ h2 {
 #btn-enviar-formulario {
     width: 100%;
     background-color: var(--color-2rio);
+    outline: none;
+    cursor: pointer;
+    color: white;
 }
 
 .fi-rr-paper-plane {
-    position: absolute;
+    position: relative;
     font-size: 1.25rem;
-    bottom: 0.10rem;
-    right: 15%;
+    top: 4px;
+    /* right: 10%; */
 }
 
 #listado-redes-sociales {
     list-style-type: none;
     display: flex;
     column-gap: 16px;
-    color: white;
+    margin-bottom: 5vh;
 }
 
+#listado-redes-sociales li:hover {
+    transform: scale(1.2);
+    transition: transform 0.25s;
+}
 
 /* ----------FOOTER---------- */
 footer {
-    margin-top: 32px;
+    /* margin-top: 32px; */
     height: 10vh;
 
     display: flex;
@@ -558,7 +606,7 @@ footer {
     font-weight: bold;
     margin-right: 8px;
     padding: 4px;
-    background-color: var(--color-1rio-oscuro);
+    background-color: var(--color-1rio-claro);
     color: white;
     /* border-radius: 50%; */
 
@@ -573,9 +621,9 @@ footer {
     display: block;
 }
 
-.borde-punteado {
+/* .borde-punteado {
     border: 2px dashed white;
-}
+} */
 
 a {
     text-decoration: none;

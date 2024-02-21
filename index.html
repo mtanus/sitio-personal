@@ -187,29 +187,42 @@
 
         <div id="contenedor-form-contacto">
             <form action="#" id="formulario-contacto">
-                <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" id="campo-nombre">
-                <label for="email">Email</label>
-                <input type="text" name="email" id="campo-email">
-                <label for="mj-email">Mensaje</label>
-                <textarea name="mj-email" id="" cols="30" rows="10"></textarea>
+                <div class="contenedor-campo">
+                    <input type="text" name="nombre" id="campo-nombre" placeholder="Juan" required>
+                    <label for="nombre">Nombre</label>    
+                </div>
+                <div class="contenedor-campo">
+                    <input type="text" name="email" id="campo-email" placeholder="juanp@gmail.com" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="contenedor-campo">
+                    <textarea name="mj-email" id="" cols="30" rows="10" placeholder="Hola! Me interesan tus trabajos." required></textarea>
+                    <label for="mj-email">Mensaje</label>
+                </div>
                 <div class="contenedor-btn-enviar">
-                    <button type="submit" id="btn-enviar-formulario">Enviar mensaje</button>
-                    <i class="fi fi-rr-paper-plane"></i>
+                    <button type="submit" id="btn-enviar-formulario">
+                        Enviar mensaje <i class="fi fi-rr-paper-plane"></i>
+                    </button>                    
                 </div>
             </form>    
         </div>
 
         <p class="subtitulo-contacto">Contactame por redes sociales</p>
         <ul id="listado-redes-sociales">
-            <li class="logo-red-social borde-punteado">
-                <img src="./img/logos_redes/whatsapp_blanco.png" alt="Logo para contacto por Whatsapp">
+            <li class="logo-red-social">
+                <a href="https://wa.me/5493434626333?text=Me%20contacto%20desde%20tu%20sitio%20web" target="_blank">
+                    <img src="./img/logos_redes/whatsapp_blanco.png" alt="Logo para contacto por Whatsapp">
+                </a>
             </li>
-            <li class="logo-red-social borde-punteado">
-                <img src="./img/logos_redes/linkedin_blanco.png" alt="Logo para contacto por LinkedIn">
+            <li class="logo-red-social">
+                <a href="https://www.linkedin.com/in/mauricio-tanus-mafud-389869106/" target="_blank">
+                    <img src="./img/logos_redes/linkedin_blanco.png" alt="Logo para contacto por LinkedIn">
+                </a>
             </li>
-            <li class="logo-red-social borde-punteado">
-                <img src="./img/logos_redes/github_blanco.png" alt="Logo para contacto por Github">
+            <li class="logo-red-social">
+                <a href="https://github.com/mtanus" target="_blank">
+                    <img src="./img/logos_redes/github_blanco.png" alt="Logo para contacto por Github">
+                </a>
             </li>
         </ul>
 
