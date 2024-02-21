@@ -457,6 +457,15 @@ h2 {
 
 
 /* ----------CONTACTO---------- */
+#contacto {
+    background-color: var(--color-1rio-oscuro);
+    color: white;
+}
+
+#contacto h2 {
+    color: white;
+}
+
 .subtitulo-contacto {
     font-family: var(--fuente-titulos);
     font-weight: bold;
@@ -493,6 +502,7 @@ h2 {
 
 #btn-enviar-formulario {
     width: 100%;
+    background-color: var(--color-2rio);
 }
 
 .fi-rr-paper-plane {
@@ -506,6 +516,7 @@ h2 {
     list-style-type: none;
     display: flex;
     column-gap: 16px;
+    color: white;
 }
 
 
