@@ -41,3 +41,82 @@ for (let i = 0; i < arregloItemsMenu.length; i++) {
         
         });
 }
+
+
+/* Validar formulario de contacto */
+const campoNombre = document.getElementById('campo-nombre'),
+      campoMail = document.getElementById('campo-email'),
+      campoMensaje = document.getElementById('campo-mensaje'),
+      formularioContacto = document.getElementById('formulario-contacto');
+
+function validarNombre(nombre) {
+    let expreg = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ]{2}[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]*/gm; // Al menos un nombre de 2 letras
+    let expregNumero = /[0-9]+/gm; // Contiene algún número
+    return (expreg.test(nombre) && !expregNumero.test(nombre))
+}
+
+function validarMail(mail) {
+    let expreg = /^[A-Za-z][\w.-]+\@[A-Za-z]+[.][A-Za-z]{2,}/i; // Inicie con letra, puede contener ., -, _ y luego del @ admite sólo letras
+    return expreg.test(mail);
+}
+
+function validarFormulario() {
+    const nombre = campoNombre.value; 
+    const mail = campoMail.value; 
+    const mj = campoMensaje.value; 
+
+    let formularioValido = true;
+
+    if(!validarNombre(nombre)) {
+        console.log("Nombre erróneo: " + nombre);
+        campoNombre.focus();
+        formularioValido = false;
+    } else if(!validarMail(mail)) {
+        console.log("Mail erróneo: " + mail);
+        campoMail.focus();
+        formularioValido = false;
+    } else if (mj == "") {
+        console.log("Mensaje vacío: " + mj);
+        campoMensaje.focus();
+        formularioValido = false;
+    }
+
+    return formularioValido
+}
+
+const enviarFormulario = (evento) => {
+    evento.preventDefault();
+
+    if (validarFormulario()) {
+        const datosContacto = {
+            nombre:campoNombre.value,
+            email:campoMail.value,
+            "mj-email":campoMensaje.value
+        };
+        const mjEnviado = document.getElementById('mensaje-enviado');
+        
+        fetch('https://formbold.com/s/3pM7r', {
+            method: 'POST',
+            headers: {"Content-Type":"application/json"},
+            body: JSON.stringify(datosContacto)
+        })
+        .then(respuesta => console.log("Respuesta del servidor: ", respuesta))
+        .then(respuestaOK => {
+            // console.log("Respuesta del servidor: ", respuestaOK);
+            formularioContacto.reset();
+            mjEnviado.textContent = "Mensaje enviado exitosamente!"
+            setTimeout(() => {
+                mjEnviado.textContent = ""
+            }, 4000)
+        })
+        .catch(error => {
+            console.log("Error al enviar tu mensaje: ", error);
+            mjEnviado.textContent = "Error al enviar tu mensaje. Intenta de nuevo en unos segundos."
+            setTimeout(() => {
+                mjEnviado.textContent = ""
+            }, 4000)
+        })
+    }
+}
+
+formularioContacto.addEventListener('submit', enviarFormulario);

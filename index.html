@@ -186,7 +186,7 @@
         <p class="subtitulo-contacto">Envíame un mensaje</p>
 
         <div id="contenedor-form-contacto">
-            <form action="#" id="formulario-contacto">
+            <form id="formulario-contacto" action="#" method="POST">
                 <div class="contenedor-campo">
                     <input type="text" name="nombre" id="campo-nombre" placeholder="Juan" required>
                     <label for="nombre">Nombre</label>    
@@ -196,7 +196,7 @@
                     <label for="email">Email</label>
                 </div>
                 <div class="contenedor-campo">
-                    <textarea name="mj-email" id="" cols="30" rows="10" placeholder="Hola! Me interesan tus trabajos." required></textarea>
+                    <textarea name="mj-email" id="campo-mensaje" cols="30" rows="10" placeholder="Hola! Me interesan tus trabajos." required></textarea>
                     <label for="mj-email">Mensaje</label>
                 </div>
                 <div class="contenedor-btn-enviar">
@@ -206,6 +206,8 @@
                 </div>
             </form>    
         </div>
+
+        <div id="mensaje-enviado"></div>
 
         <p class="subtitulo-contacto">Contactame por redes sociales</p>
         <ul id="listado-redes-sociales">

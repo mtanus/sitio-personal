@@ -556,6 +556,12 @@ h2 {
     /* right: 10%; */
 }
 
+#mensaje-enviado {
+    padding: 0px 4px;
+    text-align: center;
+    font-size: 0.75rem;
+}
+
 #listado-redes-sociales {
     list-style-type: none;
     display: flex;
