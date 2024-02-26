@@ -120,3 +120,22 @@ const enviarFormulario = (evento) => {
 }
 
 formularioContacto.addEventListener('submit', enviarFormulario);
+
+
+/* Aparición flecha para subir al inicio o scroll up */
+const aparecerFlechaSubir = () => {
+    const linkEncabezado = document.getElementById('link-encabezado');
+
+    // Visualizo la flecha para subir al bajar un poco con el mouse
+    if (this.scrollY >= 200) {
+        linkEncabezado.classList.remove('elemento-oculto');
+        linkEncabezado.classList.add('elemento-visible') 
+    } else {
+        linkEncabezado.classList.remove('elemento-visible');
+        linkEncabezado.classList.add('elemento-oculto'); 
+    }
+    
+}
+
+window.addEventListener('scroll', aparecerFlechaSubir);
+

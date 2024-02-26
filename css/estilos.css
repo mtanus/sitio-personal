@@ -595,27 +595,33 @@ footer {
 
 
 /* ----------OTROS---------- */
-#link-encabezado,
-.fi-rr-chevron-double-up {
+#link-encabezado {
+    /* display: none; */
     font-size: 1.5rem;
 
-    position: sticky;
+    position: fixed;
     top: 90%;
     left: 90%;
 
     height: 5vh;
+    margin-right: 8px;
+
+    transition: transform .25s;
 }
 
 .fi-rr-chevron-double-up {
     font-size: 1.5rem;
     font-family: var(--fuente-titulos);
     font-weight: bold;
-    margin-right: 8px;
     padding: 4px;
     background-color: var(--color-1rio-claro);
     color: white;
     /* border-radius: 50%; */
 
+}
+
+#link-encabezado:hover {
+    transform: translateY(-8px);
 }
 
 /* ----------CLASES GENERALES---------- */
