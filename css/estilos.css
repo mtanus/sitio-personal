@@ -194,19 +194,29 @@ h1 {
     padding: 4px;
 
     background-color: var(--color-1rio-oscuro);
-    color: var(--color-2rio);
+    /* color: var(--color-2rio); */
+    color: white;
+
 }
 
 .logo-contacto:hover {
-    color: white;
+    /* color: white; */
+    color: var(--color-2rio);
     transform: scale(1.1);
     transition: 0.15s;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s;
 }
 
 .logo-contacto i {
     font-size: 1.75rem;
     text-align: center;
     padding: 4px;
+}
+
+#info-adicional {
+    color: var(--color-3rio);
 }
 
 #contenedor-link-cv {

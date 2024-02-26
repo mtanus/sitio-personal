@@ -139,3 +139,40 @@ const aparecerFlechaSubir = () => {
 
 window.addEventListener('scroll', aparecerFlechaSubir);
 
+/* Aparición de información detallada al posarse sobre los logos de contacto */
+const infoAdicional = document.getElementById('info-adicional');
+
+const logoMail = document.querySelector('#listado-contacto .fi-rr-envelope');
+const mostrarMail = () => {
+    infoAdicional.textContent = 'mtanusmafud@gmail.com';
+}
+logoMail.addEventListener('mouseover', mostrarMail);
+
+const ocultarMail = () => {
+    infoAdicional.textContent = '';
+}
+logoMail.addEventListener('mouseout', ocultarMail);
+
+
+const logoTelefono = document.querySelector('#listado-contacto .fi-rr-phone-flip');
+const mostrarTelefono = () => {
+    infoAdicional.textContent = '+54 9 343 4626333';
+}
+logoTelefono.addEventListener('mouseover', mostrarTelefono);
+
+const ocultarTelefono = () => {
+    infoAdicional.textContent = '';
+}
+logoTelefono.addEventListener('mouseout', ocultarTelefono);
+
+
+const logoUbicacion = document.querySelector('#listado-contacto .fi-rr-marker');
+const mostrarUbicacion = () => {
+    infoAdicional.textContent = 'Neuquén - Argentina';
+}
+logoUbicacion.addEventListener('mouseover', mostrarUbicacion);
+
+const ocultarUbicacion = () => {
+    infoAdicional.textContent = '';
+}
+logoUbicacion.addEventListener('mouseout', ocultarUbicacion);
